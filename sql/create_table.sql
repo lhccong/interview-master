@@ -6,7 +6,7 @@
 create database if not exists interview;
 
 -- 切换库
-use my_db;
+use interview;
 
 -- 用户表
 create table if not exists user
