@@ -10,11 +10,26 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
   # 文件上传
   servlet:
     multipart:
       # 大小限制
       max-file-size: 10MB
+#logging:
+#  level:
+#    org.springframework.security:
+#      - debug
+#      - info
+#    org.springframework.web: error
+#    org.hibernate.SQL: debug
+#    org.hibernate.engine.QueryParameters: debug
+#    org.hibernate.engine.query.HQLQueryPlan: debug
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
 server:
   address: 0.0.0.0
   port: 8101
@@ -28,4 +43,4 @@ knife4j:
       default:
         api-rule: package
         api-rule-resources:
-          - com.cong.springbootinit.controller
+          - com.code.cong.interview.controller
